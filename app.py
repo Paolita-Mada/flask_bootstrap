@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello():
+def hello_wordl():
     return 'Hola Mundo'
 
 @app.route('/usuario/<name>')
