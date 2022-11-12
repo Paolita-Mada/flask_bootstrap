@@ -1,0 +1,3 @@
+# Para hechar andar el programa :
+# pipenv shell
+# flask --app app --debug run
