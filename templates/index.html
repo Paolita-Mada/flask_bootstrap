@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block titulo %} User page % endblock %}
+
+{% block body %} 
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1>Aplicacion Web con Flask y Bootstrap</h1>
+        <a href="{{url_for('create')}}" class = 'btn btn-primary'>Nuevo</a>
+        {% for message in messages %}
+        <div class="message">
+            <h3>{{ message['title'] }}</h3>
+            <img src="{{message['picture']}}" alt="{{message['title']}}" class = 'img img-fluid'>
+            <p>{{ message['content'] }}</p>
+            <a href="{{ url_for('update', id = message.id)}}">actualizar>/a>
+        <div>
+        {% endfor %}
+        <div>
+<main>
+{% endback %}                               
