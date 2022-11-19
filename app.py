@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 class Message(db.Model):
-    __table_name__= 'messages'
+    __tablename__ = 'messages'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(128), nullable=False)
     content = db.Column(db.Text, nullable=False)
@@ -41,7 +41,7 @@ def create():
             db.session.commit()
             return redirect(url_for('index'))
 
-    return render_template('create.html')
+            return render_template('create.html')
 
 @app.route('/<id>/update', methods = ('GET', 'POST'))
 def update(id):
@@ -53,7 +53,17 @@ def update(id):
             message.picture = request.form['picture']
             db.session.commit()
             return redirect('/')
-    return render_template('update.html', message = message)    
+
+    return render_template('update.html', message = message)
+
+@app.route('/delete', methods = ['POST'])
+def delete():
+    id = request.form['id']
+    message = Message.query.filter_by(id=id).first()
+    db.session.delete(message)
+    db.session.commit()
+    flash('Mensaje Eliminado')
+    return redirect('/')
     
 @app.route('/usuario/<name>')
 def user(name):
