@@ -2,27 +2,27 @@
 {% block title %} User page {% endblock %}
 {% block body %}
 <h1>Agrega un nuevo mensaje</h1>
-<form method="post">
-    <label for="títle">Título</label>
+<form method = "POST">
+    <label for = "títle">Título</label>
     <br>
-    <input type="text" name="title" id="title"
-           placeholder="Título del Mensaje "
-           value="{{ request.form['title'] }}"></input>
+    <input type = "text" name = "title" id = "title"
+           placeholder = "Título del Mensaje "
+           value = "{{ request.form['title'] }}"></input>
     <br>
-    <label for="picture">Foto del Mensaje</label>
+    <label for = "picture">Foto del Mensaje</label>
     <br>
-    <input type="text" name="picture" id="picture"
-           placeholder="Agrega tu Foto "
-           value="{{ request.form['picture'] }}"></input>
+    <input type = "text" name = "picture" id = "picture"
+           placeholder = "Agrega tu Foto "
+           value = "{{ request.form['picture'] }}"></input>
     <br>
-    <label for="content">Contenido del Mensaje</label>
+    <label for = "content">Contenido del Mensaje</label>
     <br>
-    <textarea name="content" id="content"
-              placeholder="Agrega el Mensaje"
-              rows="15"
-              cols="60"
+    <textarea name = "content" id = "content"
+              placeholder = "Agrega el Mensaje"
+              rows = "15"
+              cols = "60"
               >{{ request.form['content'] }}</textarea>
     <br>
-    <button type="submit">Submit</button>
+    <button type = "submit">Submit</button>
 </form>
 {% endblock %}

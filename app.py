@@ -41,7 +41,7 @@ def create():
             db.session.commit()
             return redirect(url_for('index'))
 
-            return render_template('create.html')
+    return render_template('create.html')
 
 @app.route('/<id>/update', methods = ('GET', 'POST'))
 def update(id):
