@@ -40,3 +40,13 @@ Para ejecutar el servidor de desarrollo el comando es el siguiente:
 ```
 flask --app app --debug run
 ```
+## Blueprint
+
+Los blueprint permiten componer app desde componentes pequeños. Cada componente es como una mini app. Permiten crear app grandes manteniendolas el codigo y la estructura simples.
+
+## Modulos
+
+Para que los blueprint esten bien organizados, es mejor trabajarlos como modulos, es decir; que esten dentro de una carpeta. Los modulos se pueden anidar, de hecho; nosotros hicimos el modulo 'app' con su respectivo '__init__.py' y dentro tenemos otros modulos como el modulo 'messages' que es ademas un blueprint.
+
+## Tarea
+Crear un nuevo recurso sencillo, sin base de datos, como blueprint bajo a url '/memes' y debe renderiar un html lleno de memes.
