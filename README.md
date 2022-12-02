@@ -50,3 +50,14 @@ Para que los blueprint esten bien organizados, es mejor trabajarlos como modulos
 
 ## Tarea
 Crear un nuevo recurso sencillo, sin base de datos, como blueprint bajo a url '/memes' y debe renderiar un html lleno de memes.
+
+## Blueprints
+
+## MVC (Model-View-Controller)
+
+![MVC](https://cdn.educba.com/academy/wp-content/uploads/2019/04/what-is-mvc-design-pattern.jpg.webp)
+
+Es una agrupacion para separar las responsabilidades en la manipulacion de las solicitudes y respuestas. Quien recibe las solicitudes es el Controlador o en flask, las rutras.
+Los controladores se encargan de revisar que la solicitud cumpla con las caracteristicas necesarias para entregar una respuesta acorde (que tenga todos los datos). Si el controlador lo permite, se podria opcionalmente llamar al modelo para obtener o modificar los datos de la BBDD. Y finalmente enviar una respuesta que contenga la presentacion de la app. En nuestro caso la carga de presentacion comunmente conocida como -vistas (views) se llaman Templates.
+
+Por lo tanto en Flask el MVC podrias ser adaptado como MTR (modelo , template, ruta), pero es lo mismo en terminos de separar las responsabilidad.

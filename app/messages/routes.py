@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from app.extensions import db
 from app.messages import bp
 from app.models.message import Message
