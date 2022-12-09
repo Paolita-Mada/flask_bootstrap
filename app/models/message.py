@@ -6,7 +6,6 @@ class Message(db.Model):
     title = db.Column(db.String(128), nullable=False)
     content = db.Column(db.Text, nullable=False)
     picture = db.Column(db.String(300))
-
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __repr__(self):
