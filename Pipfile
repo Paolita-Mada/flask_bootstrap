@@ -9,6 +9,8 @@ flask-sqlalchemy = "*"
 flask-migrate = "*"
 psycopg2 = "*"
 flask-login = "*"
+waitress = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
