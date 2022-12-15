@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block title %} User page {% endblock %}
 {% block body %}
-<h1>Agrega un nuevo mensaje</h1>
+<h1>Agrega un nuevo Producto</h1>
 <form method = "POST">
     <label for = "títle" class = "form-label">Título</label>
     <input type = "text" name = "title" id = "title"
            placeholder = "Título del Mensaje "
            value = "{{ request.form['title'] }}" class = "form-control"></input>
-    <label for = "picture" class = "form-label">Foto</label>
+    <label for = "picture" class = "form-label">Foto del producto</label>
     <input type = "text" name = "picture" id = "picture"
            placeholder = "Agrega tu Foto "
            value = "{{ request.form['picture'] }}" class = "form-control"></input>
@@ -18,6 +18,9 @@
               cols = "60"
               class = "form-control"
               >{{ request.form['content'] }}</textarea>
-    <button type = "submit" class = "btn btn-primary">Submit</button>
+    <label for="price">Precio</label>
+    <input type="text" name="price" id="price" class="form-control">
+
+    <button type = "submit" class = "btn btn-primary mt-3">Submit</button>
 </form>
 {% endblock %}
